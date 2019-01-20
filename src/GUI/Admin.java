@@ -15,68 +15,56 @@ import java.io.IOException;
 
 public class Admin extends Application {
 
-    public void launchWindow() {
-
-        Scene s1 = null;
-
-
-         try {
-               Parent root = FXMLLoader.load(getClass().getResource("Admin.fxml"));
-
-                s1 = new Scene(root, 400, 600);
-                Stage s = new Stage();
-                s.setScene(s1);
-                s.show();
-
-            }
-            catch (NullPointerException n ){
-                System.out.println(n);
-
-            }
-            
-            catch (IOException e){
-                System.out.println(e);
-            }
-
-      
-        
-
-    }
-    @Override
-    public void start(Stage primaryStage) {
-        launchWindow();
-
-    }
-
-    public static void main(String[] args) {
-
-
-        launch(args);
-
-
-
-
-    }
-
-
-    Button  Coaches_Button ;
+    public static Stage stage;
+/*
     @FXML
-    Button  See_Coaches_Button ;
-    Button  Add_Coaches_Button ;
-
-    Pane See_Coaches_Pane ;
-    Pane Add_Coaches_Pane ;
-
+    public Button Coaches_Button ;
+    public Button See_Coaches_Button ;
+    public Button Add_Coaches_Button ;
+    public Pane See_Coaches_Pane ;
+    public Pane Add_Coaches_Pane ;
 
     public void Add_Coaches_method() {
         See_Coaches_Pane.setVisible(false);
         Add_Coaches_Pane.setVisible(true);
-
-
     }
+
     public void See_Coaches_method() {
 
+    }*/
+
+
+    public static void main(String[] args) {
+        launch(args);
     }
+
+    @Override
+    public void start(Stage primaryStage) {
+        launchWindow();
+    }
+
+    public void launchWindow() {
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("Admin.fxml"));
+            Scene scene = new Scene(root, 600, 400);
+            stage = new Stage();
+            stage.setScene(scene);
+            stage.show();
+        }
+        catch (NullPointerException n ){
+            System.out.println(n);
+
+        }
+
+        catch (IOException e){
+            System.out.println(e);
+        }
+
+
+
+
+    }
+
 }
 
 
