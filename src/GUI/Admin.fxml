@@ -20,8 +20,8 @@
          <children>
             <MenuButton id="1" fx:id="Coaches_Button" alignment="CENTER" layoutX="10.0" layoutY="40.0" mnemonicParsing="false" popupSide="RIGHT" prefHeight="69.0" prefWidth="97.0" text="Coaches" textAlignment="CENTER">
                <items>
-                  <MenuItem id="1.1" mnemonicParsing="false" text="See Coaches" />
-                  <MenuItem id="1.2"  mnemonicParsing="false" text="Add Coach" />
+                  <MenuItem id="1.1" mnemonicParsing="false" onAction="#See_Coaches_method" text="See Coaches" />
+                  <MenuItem id="1.2" mnemonicParsing="false" onAction="#Add_Coaches_method" text="Add Coach" />
                </items>
                <VBox.margin>
                   <Insets bottom="30.0" top="30.0" />
@@ -29,8 +29,8 @@
             </MenuButton>
             <MenuButton id="2" alignment="CENTER" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" popupSide="RIGHT" prefHeight="69.0" prefWidth="97.0" text="Members" textAlignment="CENTER">
                <items>
-                  <MenuItem id="2.1" mnemonicParsing="false" text="See Members" />
-                  <MenuItem id="2.2" mnemonicParsing="false" text="Add Members" />
+                  <MenuItem id="2.1" mnemonicParsing="false" onAction="#See_member_method" text="See Members" />
+                  <MenuItem id="2.2" mnemonicParsing="false" onAction="#Add_member_method" text="Add Members" />
                </items>
             </MenuButton>
             <MenuButton id="3" alignment="CENTER" layoutX="10.0" layoutY="79.0" mnemonicParsing="false" popupSide="RIGHT" prefHeight="69.0" prefWidth="97.0" text="Bills" textAlignment="CENTER">
@@ -64,7 +64,7 @@
                   <Button layoutX="326.0" layoutY="24.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="72.0" text="Search" />
                </children>
             </Pane>
-            <Pane id="1.2.1" fx:id="Add_Coaches_Pane" prefHeight="346.0" prefWidth="430.0">
+            <Pane id="1.2.1" fx:id="Add_Coaches_Pane" prefHeight="346.0" prefWidth="430.0" visible="false">
                <children>
                   <TextField layoutX="14.0" layoutY="53.0" promptText="First name" />
                   <TextField layoutX="201.0" layoutY="53.0" promptText="Last name" />
@@ -74,6 +74,20 @@
                   <ComboBox fx:id="Gender" layoutX="200.0" layoutY="110.0" prefWidth="150.0" promptText="Gender" visibleRowCount="2" />
                </children>
             </Pane>
+            <Pane fx:id="See_members_pane" layoutX="2.0" prefHeight="346.0" prefWidth="430.0">
+               <children>
+                  <TableView layoutX="13.0" layoutY="86.0" prefHeight="249.0" prefWidth="370.0">
+                    <columns>
+                      <TableColumn prefWidth="75.0" text="C1" />
+                      <TableColumn prefWidth="75.0" text="C2" />
+                        <TableColumn prefWidth="75.0" text="Column X" />
+                    </columns>
+                  </TableView>
+                  <TextField layoutX="15.0" layoutY="49.0" prefHeight="25.0" prefWidth="218.0" />
+                  <Button layoutX="331.0" layoutY="49.0" mnemonicParsing="false" text="Button" />
+               </children>
+            </Pane>
+            <Pane fx:id="Add_members_pane" layoutY="-4.0" prefHeight="356.0" prefWidth="430.0" visible="false" />
          </children>
       </Pane>
    </children>
