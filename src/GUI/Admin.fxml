@@ -42,12 +42,12 @@
                   <PasswordField layoutX="50.0" layoutY="110.0" promptText="Password" />
                   <Button layoutX="287.0" layoutY="249.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="135.0" text="Submit" />
                   <Label id="1.2_error_label" layoutX="57.0" layoutY="253.0" prefHeight="36.0" prefWidth="135.0" />
-                  <RadioButton layoutX="296.0" layoutY="161.0" mnemonicParsing="false" text="Male">
+                  <RadioButton layoutX="309.0" layoutY="161.0" mnemonicParsing="false" text="Male">
                      <toggleGroup>
                         <ToggleGroup fx:id="C_Gender" />
                      </toggleGroup>
                   </RadioButton>
-                  <RadioButton layoutX="296.0" layoutY="182.0" mnemonicParsing="false" text="Female" toggleGroup="$C_Gender" />
+                  <RadioButton layoutX="380.0" layoutY="161.0" mnemonicParsing="false" text="Female" toggleGroup="$C_Gender" />
                </children>
             </Pane>
             <Pane fx:id="See_members_Pane" layoutY="8.0" prefHeight="356.0" prefWidth="612.0" visible="false">
@@ -68,15 +68,18 @@
                <children>
                   <PasswordField layoutX="76.0" layoutY="80.0" promptText="Password" />
                   <PasswordField layoutX="76.0" layoutY="117.0" promptText="Re-Enter Password" />
-                  <TextField layoutX="76.0" layoutY="40.0" promptText="First Name" />
-                  <TextField layoutX="308.0" layoutY="40.0" promptText="Last Name" />
-                  <TextField layoutX="308.0" layoutY="80.0" promptText="Weight" />
-                  <TextField layoutX="308.0" layoutY="117.0" promptText="Height" />
-                  <DatePicker layoutX="76.0" layoutY="174.0" prefHeight="36.0" prefWidth="149.0" promptText="Datr of Birth" />
-                  <RadioButton layoutX="308.0" layoutY="177.0" mnemonicParsing="false" text="Male" />
-                  <RadioButton layoutX="375.0" layoutY="177.0" mnemonicParsing="false" text="Female" />
-                  <Button layoutX="308.0" layoutY="242.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="163.0" text="Add" />
+                  <TextField layoutX="76.0" layoutY="40.0" promptText="User name" />
+                  <TextField layoutX="308.0" layoutY="40.0" promptText="Weight" />
+                  <TextField layoutX="308.0" layoutY="80.0" promptText="Height" />
+                  <DatePicker layoutX="76.0" layoutY="159.0" prefHeight="36.0" prefWidth="149.0" promptText="Datr of Birth" />
+                  <RadioButton layoutX="308.0" layoutY="121.0" mnemonicParsing="false" text="Male">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="m_Gender" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton layoutX="382.0" layoutY="121.0" mnemonicParsing="false" text="Female" toggleGroup="$m_Gender" />
+                  <Button layoutX="301.0" layoutY="207.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="163.0" text="Add" />
                   <Label id="2.2_error_label" layoutX="76.0" layoutY="239.0" prefHeight="50.0" prefWidth="163.0" />
+                  <DatePicker layoutX="78.0" layoutY="214.0" prefHeight="36.0" prefWidth="149.0" promptText="Subscription date" />
                </children></Pane>
             <Pane fx:id="See_Bills_Pane" layoutX="6.0" layoutY="4.0" prefHeight="363.0" prefWidth="604.0" visible="false">
                <children>
@@ -107,34 +110,41 @@
                   <Button layoutX="228.0" layoutY="194.0" mnemonicParsing="false" onAction="#Setting_confirm_next" prefHeight="25.0" prefWidth="95.0" text="Next" />
                   <PasswordField layoutX="201.0" layoutY="147.0" promptText="Password" />
                </children></Pane>
-            <Pane fx:id="Setting_Next_Pane" layoutX="22.0" layoutY="14.0" prefHeight="344.0" prefWidth="579.0" />
+            <Pane fx:id="Setting_Next_Pane" layoutX="22.0" layoutY="14.0" prefHeight="344.0" prefWidth="579.0" visible="false">
+               <children>
+                  <TextField layoutX="48.0" layoutY="42.0" promptText="User name" />
+                  <PasswordField layoutX="48.0" layoutY="133.0" promptText="Confirm new Password" />
+                  <PasswordField layoutX="48.0" layoutY="89.0" prefWidth="149.0" promptText="new Password" />
+                  <Button layoutX="429.0" layoutY="184.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="102.0" text="OK" />
+               </children></Pane>
          </children>
       </Pane>
       <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="600.0">
         <menus>
           <Menu mnemonicParsing="false" text="Coaches">
             <items>
-              <MenuItem mnemonicParsing="false" onAction="#See_Coaches_method" text="See coaches" />
                   <MenuItem mnemonicParsing="false" onAction="#Add_Coaches_method" text="Add coaches" />
+              <MenuItem mnemonicParsing="false" onAction="#See_Coaches_method" text="See coaches" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Members">
             <items>
-              <MenuItem mnemonicParsing="false" onAction="#See_member_method" text="See members" />
                   <MenuItem mnemonicParsing="false" onAction="#Add_member_method" text="Add members" />
+              <MenuItem mnemonicParsing="false" onAction="#See_member_method" text="See members" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Bills">
             <items>
-              <MenuItem mnemonicParsing="false" onAction="#See_Bills_method" text="See bills" />
                   <MenuItem mnemonicParsing="false" onAction="#Add_Bills_method" text="Add bill" />
+              <MenuItem mnemonicParsing="false" onAction="#See_Bills_method" text="See bills" />
             </items>
           </Menu>
             <Menu mnemonicParsing="false" text="Setting">
-               <items>
-                  <MenuItem mnemonicParsing="false" text="About" />
-               </items>
+            <items>
+                <MenuItem mnemonicParsing="false" onAction="#Setting_method" text="my profile" />
+            </items>
             </Menu>
+
         </menus>
       </MenuBar>
    </children>

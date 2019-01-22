@@ -40,8 +40,10 @@ public class Admin extends Application {
         Add_Coaches_Pane.setVisible(true);
         See_members_Pane.setVisible(false);
         Add_members_Pane.setVisible(false);
-         See_Bills_Pane.setVisible(false) ;
-         Add_Bill_Pane.setVisible(false) ;
+        See_Bills_Pane.setVisible(false) ;
+        Add_Bill_Pane.setVisible(false) ;
+        Setting_confirm_Pane.setVisible(false) ;
+        Setting_Next_Pane.setVisible(false) ;
     }
 
     public void See_Coaches_method() {
@@ -52,6 +54,8 @@ public class Admin extends Application {
         Add_members_Pane.setVisible(false);
         See_Bills_Pane.setVisible(false) ;
         Add_Bill_Pane.setVisible(false) ;
+        Setting_confirm_Pane.setVisible(false) ;
+        Setting_Next_Pane.setVisible(false) ;
     }
     public void See_member_method() {
         See_Coaches_Pane.setVisible(false);
@@ -60,6 +64,8 @@ public class Admin extends Application {
         Add_members_Pane.setVisible(false);
         See_Bills_Pane.setVisible(false) ;
         Add_Bill_Pane.setVisible(false) ;
+        Setting_confirm_Pane.setVisible(false) ;
+        Setting_Next_Pane.setVisible(false) ;
 
     }
 
@@ -71,6 +77,8 @@ public class Admin extends Application {
         Add_members_Pane.setVisible(true);
         See_Bills_Pane.setVisible(false) ;
         Add_Bill_Pane.setVisible(false) ;
+        Setting_confirm_Pane.setVisible(false) ;
+        Setting_Next_Pane.setVisible(false) ;
 
     }
     public void See_Bills_method(){
@@ -81,6 +89,8 @@ public class Admin extends Application {
         Add_members_Pane.setVisible(false);
         See_Bills_Pane.setVisible(true) ;
         Add_Bill_Pane.setVisible(false) ;
+        Setting_confirm_Pane.setVisible(false) ;
+        Setting_Next_Pane.setVisible(false) ;
 
     }
     public void Add_Bills_method(){
@@ -91,6 +101,19 @@ public class Admin extends Application {
         Add_members_Pane.setVisible(false);
         See_Bills_Pane.setVisible(false) ;
         Add_Bill_Pane.setVisible(true) ;
+        Setting_confirm_Pane.setVisible(false) ;
+        Setting_Next_Pane.setVisible(false) ;
+
+    }    public void Setting_method(){
+
+        See_Coaches_Pane.setVisible(false);
+        Add_Coaches_Pane.setVisible(false);
+        See_members_Pane.setVisible(false);
+        Add_members_Pane.setVisible(false);
+        See_Bills_Pane.setVisible(false) ;
+        Add_Bill_Pane.setVisible(false) ;
+        Setting_confirm_Pane.setVisible(true) ;
+        Setting_Next_Pane.setVisible(false) ;
 
     }    public void Setting_confirm_next(){
 
@@ -100,6 +123,8 @@ public class Admin extends Application {
         Add_members_Pane.setVisible(false);
         See_Bills_Pane.setVisible(false) ;
         Add_Bill_Pane.setVisible(false) ;
+        Setting_confirm_Pane.setVisible(false) ;
+        Setting_Next_Pane.setVisible(true) ;
 
     }
 
