@@ -1,94 +1,141 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ComboBox?>
-<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.PasswordField?>
-<?import javafx.scene.control.ScrollBar?>
+<?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Admin">
    <children>
-      <VBox layoutX="14.0" layoutY="74.0" prefHeight="260.0" prefWidth="120.0">
+      <Pane layoutX="-8.0" layoutY="31.0" prefHeight="370.0" prefWidth="612.0">
          <children>
-            <MenuButton id="1" fx:id="Coaches_Button" alignment="CENTER" layoutX="10.0" layoutY="40.0" mnemonicParsing="false" popupSide="RIGHT" prefHeight="69.0" prefWidth="97.0" text="Coaches" textAlignment="CENTER">
-               <items>
-                  <MenuItem id="1.1" mnemonicParsing="false" onAction="#See_Coaches_method" text="See Coaches" />
-                  <MenuItem id="1.2" mnemonicParsing="false" onAction="#Add_Coaches_method" text="Add Coach" />
-               </items>
-               <VBox.margin>
-                  <Insets bottom="30.0" top="30.0" />
-               </VBox.margin>
-            </MenuButton>
-            <MenuButton id="2" alignment="CENTER" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" popupSide="RIGHT" prefHeight="69.0" prefWidth="97.0" text="Members" textAlignment="CENTER">
-               <items>
-                  <MenuItem id="2.1" mnemonicParsing="false" onAction="#See_member_method" text="See Members" />
-                  <MenuItem id="2.2" mnemonicParsing="false" onAction="#Add_member_method" text="Add Members" />
-               </items>
-            </MenuButton>
-            <MenuButton id="3" alignment="CENTER" layoutX="10.0" layoutY="79.0" mnemonicParsing="false" popupSide="RIGHT" prefHeight="69.0" prefWidth="97.0" text="Bills" textAlignment="CENTER">
-               <items>
-                  <MenuItem id="3.1" mnemonicParsing="false" text="Action 1" />
-                  <MenuItem id="3.2" mnemonicParsing="false" text="Action 2" />
-               </items>
-               <VBox.margin>
-                  <Insets bottom="30.0" top="30.0" />
-               </VBox.margin>
-            </MenuButton>
-             <Button id="4" alignment="CENTER" layoutX="10.0" layoutY="194.0" mnemonicParsing="false" prefHeight="69.0" prefWidth="97.0" text="Setting" textAlignment="CENTER">
-            </Button>
-
-         </children>
-
-      </VBox>
-      <Pane layoutX="162.0" layoutY="31.0" prefHeight="346.0" prefWidth="430.0">
-         <children>
-            <Pane id="See_Coaches" fx:id="See_Coaches_Pane" layoutX="10.0" layoutY="9.0" prefHeight="329.0" prefWidth="412.0" visible="false">
+            <Pane id="See_Coaches" fx:id="See_Coaches_Pane" layoutX="6.0" layoutY="10.0" prefHeight="329.0" prefWidth="587.0" visible="false">
                <children>
-                  <TableView id="1.1.1" layoutX="14.0" layoutY="56.0" prefHeight="260.0" prefWidth="370.0">
+                  <TableView id="1.1.1" layoutX="14.0" layoutY="60.0" prefHeight="281.0" prefWidth="551.0">
                     <columns>
-                      <TableColumn prefWidth="167.0" text="Name" />
-                      <TableColumn prefWidth="101.0" text="ID" />
-                        <TableColumn minWidth="0.0" prefWidth="101.0" text="Gender " />
+                      <TableColumn prefWidth="272.0" text="Name" />
+                      <TableColumn prefWidth="162.0" text="ID" />
+                        <TableColumn minWidth="0.0" prefWidth="116.0" text="Gender " />
                     </columns>
                   </TableView>
-                  <ScrollBar layoutX="384.0" layoutY="56.0" orientation="VERTICAL" prefHeight="260.0" prefWidth="14.0" />
                   <TextField layoutX="14.0" layoutY="24.0" prefHeight="25.0" prefWidth="302.0" promptText="ID" />
-                  <Button layoutX="326.0" layoutY="24.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="72.0" text="Search" />
+                  <Button layoutX="492.0" layoutY="24.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="72.0" text="Search" />
                </children>
             </Pane>
-            <Pane id="1.2.1" fx:id="Add_Coaches_Pane" prefHeight="346.0" prefWidth="430.0" visible="false">
+            <Pane id="1.2.1" fx:id="Add_Coaches_Pane" layoutX="22.0" layoutY="4.0" prefHeight="363.0" prefWidth="568.0" visible="false">
                <children>
-                  <TextField layoutX="14.0" layoutY="53.0" promptText="First name" />
-                  <TextField layoutX="201.0" layoutY="53.0" promptText="Last name" />
-                  <TextField layoutX="14.0" layoutY="110.0" promptText="Salary " />
-                  <PasswordField layoutX="14.0" layoutY="198.0" promptText="Re-Enter Password" />
-                  <PasswordField layoutX="14.0" layoutY="154.0" promptText="Password" />
-                  <ComboBox fx:id="Gender" layoutX="200.0" layoutY="110.0" prefWidth="150.0" promptText="Gender" visibleRowCount="2" />
+                  <TextField layoutX="50.0" layoutY="53.0" promptText="First name" />
+                  <TextField layoutX="309.0" layoutY="53.0" promptText="Last name" />
+                  <TextField layoutX="306.0" layoutY="110.0" promptText="Salary " />
+                  <PasswordField layoutX="50.0" layoutY="157.0" promptText="Re-Enter Password" />
+                  <PasswordField layoutX="50.0" layoutY="110.0" promptText="Password" />
+                  <Button layoutX="287.0" layoutY="249.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="135.0" text="Submit" />
+                  <Label id="1.2_error_label" layoutX="57.0" layoutY="253.0" prefHeight="36.0" prefWidth="135.0" />
+                  <RadioButton layoutX="296.0" layoutY="161.0" mnemonicParsing="false" text="Male">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="C_Gender" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton layoutX="296.0" layoutY="182.0" mnemonicParsing="false" text="Female" toggleGroup="$C_Gender" />
                </children>
             </Pane>
-            <Pane fx:id="See_members_pane" layoutX="2.0" prefHeight="346.0" prefWidth="430.0">
+            <Pane fx:id="See_members_Pane" layoutY="8.0" prefHeight="356.0" prefWidth="612.0" visible="false">
                <children>
-                  <TableView layoutX="13.0" layoutY="86.0" prefHeight="249.0" prefWidth="370.0">
+                  <TableView layoutX="16.0" layoutY="84.0" prefHeight="258.0" prefWidth="587.0">
                     <columns>
-                      <TableColumn prefWidth="75.0" text="C1" />
-                      <TableColumn prefWidth="75.0" text="C2" />
-                        <TableColumn prefWidth="75.0" text="Column X" />
+                      <TableColumn prefWidth="259.0" text="Name" />
+                      <TableColumn prefWidth="123.0" text="ID" />
+                        <TableColumn prefWidth="94.0" text="Age" />
+                        <TableColumn minWidth="0.0" prefWidth="110.0" text="Gender" />
                     </columns>
                   </TableView>
-                  <TextField layoutX="15.0" layoutY="49.0" prefHeight="25.0" prefWidth="218.0" />
-                  <Button layoutX="331.0" layoutY="49.0" mnemonicParsing="false" text="Button" />
+                  <TextField layoutX="13.0" layoutY="24.0" prefHeight="25.0" prefWidth="329.0" promptText="ID " />
+                  <Button layoutX="479.0" layoutY="24.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="119.0" text="Button" />
                </children>
             </Pane>
-            <Pane fx:id="Add_members_pane" layoutY="-4.0" prefHeight="356.0" prefWidth="430.0" visible="false" />
+            <Pane fx:id="Add_members_Pane" layoutX="6.0" prefHeight="370.0" prefWidth="600.0" visible="false">
+               <children>
+                  <PasswordField layoutX="76.0" layoutY="80.0" promptText="Password" />
+                  <PasswordField layoutX="76.0" layoutY="117.0" promptText="Re-Enter Password" />
+                  <TextField layoutX="76.0" layoutY="40.0" promptText="First Name" />
+                  <TextField layoutX="308.0" layoutY="40.0" promptText="Last Name" />
+                  <TextField layoutX="308.0" layoutY="80.0" promptText="Weight" />
+                  <TextField layoutX="308.0" layoutY="117.0" promptText="Height" />
+                  <DatePicker layoutX="76.0" layoutY="174.0" prefHeight="36.0" prefWidth="149.0" promptText="Datr of Birth" />
+                  <RadioButton layoutX="308.0" layoutY="177.0" mnemonicParsing="false" text="Male" />
+                  <RadioButton layoutX="375.0" layoutY="177.0" mnemonicParsing="false" text="Female" />
+                  <Button layoutX="308.0" layoutY="242.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="163.0" text="Add" />
+                  <Label id="2.2_error_label" layoutX="76.0" layoutY="239.0" prefHeight="50.0" prefWidth="163.0" />
+               </children></Pane>
+            <Pane fx:id="See_Bills_Pane" layoutX="6.0" layoutY="4.0" prefHeight="363.0" prefWidth="604.0" visible="false">
+               <children>
+                  <TableView layoutX="14.0" layoutY="14.0" prefHeight="338.0" prefWidth="579.0">
+                    <columns>
+                      <TableColumn prefWidth="207.0" text="Name" />
+                      <TableColumn prefWidth="188.0" text="Price" />
+                        <TableColumn prefWidth="183.0" text="ID" />
+                    </columns>
+                  </TableView>
+               </children>
+            </Pane>
+            <Pane fx:id="Add_Bill_Pane" layoutX="14.0" layoutY="14.0" prefHeight="344.0" prefWidth="587.0" visible="false">
+               <children>
+                  <Button layoutX="351.0" layoutY="200.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="95.0" text="Add" />
+                  <TextField layoutX="68.0" layoutY="115.0" prefHeight="57.0" prefWidth="149.0" promptText="Price" />
+                  <TextField layoutX="68.0" layoutY="196.0" prefHeight="57.0" prefWidth="149.0" promptText="ID" />
+                  <TextField layoutX="68.0" layoutY="30.0" prefHeight="57.0" prefWidth="149.0" promptText="Name" />
+               </children>
+            </Pane>
+            <Pane fx:id="Setting_confirm_Pane" layoutX="22.0" layoutY="14.0" prefHeight="344.0" prefWidth="579.0" visible="false">
+               <children>
+                  <Label layoutX="115.0" layoutY="77.0" prefHeight="28.0" prefWidth="349.0" text="Please enter your Password to continue">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="228.0" layoutY="194.0" mnemonicParsing="false" onAction="#Setting_confirm_next" prefHeight="25.0" prefWidth="95.0" text="Next" />
+                  <PasswordField layoutX="201.0" layoutY="147.0" promptText="Password" />
+               </children></Pane>
+            <Pane fx:id="Setting_Next_Pane" layoutX="22.0" layoutY="14.0" prefHeight="344.0" prefWidth="579.0" />
          </children>
       </Pane>
+      <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="600.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Coaches">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#See_Coaches_method" text="See coaches" />
+                  <MenuItem mnemonicParsing="false" onAction="#Add_Coaches_method" text="Add coaches" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Members">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#See_member_method" text="See members" />
+                  <MenuItem mnemonicParsing="false" onAction="#Add_member_method" text="Add members" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Bills">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#See_Bills_method" text="See bills" />
+                  <MenuItem mnemonicParsing="false" onAction="#Add_Bills_method" text="Add bill" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Setting">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="About" />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
    </children>
 </AnchorPane>
