@@ -17,7 +17,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class Admin extends Application {
+public class Admin {
 
     public static Stage stage;
 
@@ -130,14 +130,6 @@ public class Admin extends Application {
 
 
 
-    public static void main(String[] args) {
-        launch(args);
-    }
-
-    @Override
-    public void start(Stage primaryStage) {
-        launchWindow();
-    }
 
     public void launchWindow() {
         try {
